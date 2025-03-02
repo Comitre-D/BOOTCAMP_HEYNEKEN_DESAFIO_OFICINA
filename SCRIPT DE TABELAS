@@ -1,0 +1,79 @@
+-- Criação do banco de dados
+CREATE DATABASE OficinaMecanica;
+USE OficinaMecanica;
+
+-- Tabela Cliente
+CREATE TABLE Cliente (
+    CodigoCliente INT PRIMARY KEY AUTO_INCREMENT,
+    Nome VARCHAR(50) NOT NULL,
+    Endereco VARCHAR(50),
+    Telefone VARCHAR(15),
+    Email VARCHAR(50)
+);
+
+-- Tabela Veículo
+CREATE TABLE Veiculo (
+    Placa VARCHAR(10) PRIMARY KEY,
+    Marca VARCHAR(30) NOT NULL,
+    Modelo VARCHAR(30) NOT NULL,
+    Ano INT,
+    Cor VARCHAR(20),
+    CodigoCliente INT,
+    FOREIGN KEY (CodigoCliente) REFERENCES Cliente(CodigoCliente)
+);
+
+-- Tabela Equipe de Mecânicos
+CREATE TABLE EquipeMecanicos (
+    CodigoEquipe INT PRIMARY KEY AUTO_INCREMENT,
+    NomeEquipe VARCHAR(50) NOT NULL
+);
+
+-- Tabela Mecânico
+CREATE TABLE Mecanico (
+    CodigoMecanico INT PRIMARY KEY AUTO_INCREMENT,
+    Nome VARCHAR(50) NOT NULL,
+    Endereco VARCHAR(50),
+    Especialidade VARCHAR(20),
+    CodigoEquipe INT,
+    FOREIGN KEY (CodigoEquipe) REFERENCES EquipeMecanicos(CodigoEquipe)
+);
+
+-- Tabela Ordem de Serviço (OS)
+CREATE TABLE OrdemServico (
+    NumeroOS INT PRIMARY KEY AUTO_INCREMENT,
+    DataEmissao DATE NOT NULL,
+    ValorTotal DECIMAL(10, 2),
+    Status VARCHAR(20),
+    DataConclusao DATE,
+    Placa VARCHAR(10),
+    CodigoEquipe INT,
+    FOREIGN KEY (Placa) REFERENCES Veiculo(Placa),
+    FOREIGN KEY (CodigoEquipe) REFERENCES EquipeMecanicos(CodigoEquipe)
+);
+
+-- Tabela Serviço
+CREATE TABLE Servico (
+    CodigoServico INT PRIMARY KEY AUTO_INCREMENT,
+    Descricao VARCHAR(100) NOT NULL,
+    ValorMaoDeObra DECIMAL(10, 2)
+);
+
+-- Tabela Peça
+CREATE TABLE Peca (
+    CodigoPeca INT PRIMARY KEY AUTO_INCREMENT,
+    Descricao VARCHAR(100) NOT NULL,
+    Valor DECIMAL(10, 2)
+);
+
+-- Tabela Item da OS
+CREATE TABLE ItemOS (
+    NumeroOS INT,
+    CodigoServico INT,
+    CodigoPeca INT,
+    Quantidade INT,
+    ValorTotal DECIMAL(10, 2),
+    PRIMARY KEY (NumeroOS, CodigoServico, CodigoPeca),
+    FOREIGN KEY (NumeroOS) REFERENCES OrdemServico(NumeroOS),
+    FOREIGN KEY (CodigoServico) REFERENCES Servico(CodigoServico),
+    FOREIGN KEY (CodigoPeca) REFERENCES Peca(CodigoPeca)
+);

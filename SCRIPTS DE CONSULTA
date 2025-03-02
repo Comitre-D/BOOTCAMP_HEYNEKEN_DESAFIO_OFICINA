@@ -1,0 +1,78 @@
+use OficinaMecanica
+
+show tables;
+
+SELECT * from Cliente
+
+select * from Cliente where CodigoCliente=1;
+
+------------------------------------------------------------------------
+
+SELECT * FROM Veiculo ORDER BY Ano DESC;
+
+------------------------------------------------------------------------
+
+SELECT CodigoEquipe, COUNT(*) AS TotalOS
+FROM OrdemServico
+GROUP BY CodigoEquipe
+HAVING TotalOS > 5;
+
+------------------------------------------------------------------------
+
+SELECT 
+    C.Nome AS Cliente,
+    SUM(OS.ValorTotal) AS TotalGasto
+FROM OrdemServico OS
+INNER JOIN Veiculo V ON OS.Placa= V.Placa
+INNER JOIN Cliente C ON V.CodigoCliente = C.CodigoCliente
+GROUP BY C.Nome;
+
+---------------------------------------------------------------------------
+
+SELECT DISTINCT
+    M.Nome AS Mecanico,
+    V.Marca AS MarcaVeiculo
+FROM OrdemServico OS
+INNER JOIN Veiculo V ON OS.Placa = V.Placa
+INNER JOIN EquipeMecanicos E ON OS.CodigoEquipe = E.CodigoEquipe
+INNER JOIN Mecanico M ON E.CodigoEquipe = M.CodigoEquipe
+WHERE V.Marca = 'Ford';
+
+-------------------------------------------------------------------------------
+
+SELECT NumeroOS, ValorTotal, ValorTotal * 0.9 AS ValorComDesconto
+FROM OrdemServico;
+
+--------------------------------------------------------------------------------
+
+SELECT * FROM OrdemServico WHERE Status = 'Concluída';
+
+----------------------------------------------------------------------------------
+
+SELECT * FROM Veiculo WHERE Marca IN ('Ford', 'Chevrolet', 'Toyota');
+
+----------------------------------------------------------------------------------
+
+SELECT 
+    CodigoEquipe,
+    COUNT(*) AS TotalOS,
+    AVG(ValorTotal) AS ValorMedio
+FROM OrdemServico
+GROUP BY CodigoEquipe
+HAVING TotalOS > 2 AND ValorMedio > 200.00;
+
+-----------------------------------------------------------------------------------
+
+SELECT 
+    OS.NumeroOS,
+    C.Nome AS Cliente,
+    V.Marca AS MarcaVeiculo,
+    V.Modelo AS ModeloVeiculo,
+    E.NomeEquipe AS EquipeResponsavel,
+    OS.DataEmissao,
+    OS.DataConclusao,
+    OS.ValorTotal
+FROM OrdemServico OS
+INNER JOIN Veiculo V ON OS.Placa= V.Placa
+INNER JOIN Cliente C ON V.CodigoCliente = C.CodigoCliente
+INNER JOIN EquipeMecanicos E ON OS.CodigoEquipe = E.CodigoEquipe;

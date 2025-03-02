@@ -1,0 +1,200 @@
+use OficinaMecanica;
+
+INSERT INTO Cliente (Nome, Endereco, Telefone, Email) VALUES
+('João Silva', 'Rua A, 123', '11999999999', 'joao@email.com'),
+('Maria Oliveira', 'Rua B, 456', '11988888888', 'maria@email.com'),
+('Carlos Souza', 'Rua C, 789', '11977777777', 'carlos@email.com'),
+('Ana Lima', 'Rua D, 101', '11966666666', 'ana@email.com'),
+('Pedro Rocha', 'Rua E, 202', '11955555555', 'pedro@email.com'),
+('Fernanda Costa', 'Rua F, 303', '11944444444', 'fernanda@email.com'),
+('Ricardo Almeida', 'Rua G, 404', '11933333333', 'ricardo@email.com'),
+('Juliana Santos', 'Rua H, 505', '11922222222', 'juliana@email.com'),
+('Marcos Pereira', 'Rua I, 606', '11911111111', 'marcos@email.com'),
+('Patrícia Rocha', 'Rua J, 707', '11900000000', 'patricia@email.com'),
+('Lucas Mendes', 'Rua K, 808', '11912345678', 'lucas@email.com'),
+('Camila Fernandes', 'Rua L, 909', '11987654321', 'camila@email.com'),
+('Gustavo Lima', 'Rua M, 1010', '11923456789', 'gustavo@email.com'),
+('Isabela Souza', 'Rua N, 1111', '11934567890', 'isabela@email.com'),
+('Roberto Alves', 'Rua O, 1212', '11945678901', 'roberto@email.com'),
+('Tatiane Costa', 'Rua P, 1313', '11956789012', 'tatiane@email.com'),
+('Felipe Rocha', 'Rua Q, 1414', '11967890123', 'felipe@email.com'),
+('Vanessa Silva', 'Rua R, 1515', '11978901234', 'vanessa@email.com'),
+('Bruno Oliveira', 'Rua S, 1616', '11989012345', 'bruno@email.com'),
+('Carla Mendes', 'Rua T, 1717', '11990123456', 'carla@email.com'),
+('Daniel Fernandes', 'Rua U, 1818', '11901234567', 'daniel@email.com'),
+('Eduarda Lima', 'Rua V, 1919', '11912345098', 'eduarda@email.com'),
+('Fábio Souza', 'Rua W, 2020', '11923450987', 'fabio@email.com'),
+('Gabriela Alves', 'Rua X, 2121', '11934509876', 'gabriela@email.com'),
+('Henrique Costa', 'Rua Y, 2222', '11945698765', 'henrique@email.com'),
+('Igor Rocha', 'Rua Z, 2323', '11956987654', 'igor@email.com'),
+('Jéssica Silva', 'Rua AA, 2424', '11967876543', 'jessica@email.com'),
+('Karine Oliveira', 'Rua BB, 2525', '11978965432', 'karine@email.com'),
+('Leandro Mendes', 'Rua CC, 2626', '11989054321', 'leandro@email.com'),
+('Mariana Fernandes', 'Rua DD, 2727', '11990143210', 'mariana@email.com');
+
+INSERT INTO Veiculo (Placa, Marca, Modelo, Ano, Cor, CodigoCliente) VALUES
+('ABC1234', 'Ford', 'Fiesta', 2018, 'Vermelho', 1),
+('XYZ5678', 'Chevrolet', 'Onix', 2020, 'Preto', 2),
+('DEF9101', 'Volkswagen', 'Gol', 2019, 'Branco', 3),
+('GHI1121', 'Fiat', 'Palio', 2017, 'Prata', 4),
+('JKL3141', 'Toyota', 'Corolla', 2021, 'Azul', 5),
+('MNO4151', 'Hyundai', 'HB20', 2022, 'Cinza', 6),
+('PQR6171', 'Renault', 'Kwid', 2020, 'Vermelho', 7),
+('STU8191', 'Honda', 'Civic', 2019, 'Preto', 8),
+('VWX0212', 'Nissan', 'Versa', 2021, 'Branco', 9),
+('YZA1222', 'Jeep', 'Renegade', 2020, 'Verde', 10),
+('BCD3242', 'Volkswagen', 'Polo', 2018, 'Azul', 11),
+('EFG5262', 'Chevrolet', 'Cruze', 2022, 'Prata', 12),
+('HIJ7282', 'Ford', 'Ka', 2019, 'Vermelho', 13),
+('KLM9303', 'Toyota', 'Hilux', 2021, 'Preto', 14),
+('NOP1323', 'Fiat', 'Toro', 2020, 'Branco', 15),
+('QRS3343', 'Hyundai', 'Creta', 2022, 'Cinza', 16),
+('TUV5363', 'Renault', 'Duster', 2019, 'Azul', 17),
+('WXY7383', 'Honda', 'HR-V', 2021, 'Prata', 18),
+('ZAB9404', 'Nissan', 'Kicks', 2020, 'Vermelho', 19),
+('CDE1424', 'Jeep', 'Compass', 2022, 'Preto', 20),
+('EFG3444', 'Volkswagen', 'Virtus', 2019, 'Branco', 21),
+('GHI5464', 'Chevrolet', 'Onix Plus', 2021, 'Cinza', 22),
+('IJK7484', 'Ford', 'Ranger', 2020, 'Azul', 23),
+('LMN9505', 'Toyota', 'Yaris', 2022, 'Prata', 24),
+('OPQ1525', 'Fiat', 'Mobi', 2019, 'Vermelho', 25),
+('RST3545', 'Hyundai', 'HB20S', 2021, 'Preto', 26),
+('TUV5565', 'Renault', 'Sandero', 2020, 'Branco', 27),
+('VWX7585', 'Honda', 'Fit', 2022, 'Cinza', 28),
+('YZA9606', 'Nissan', 'March', 2019, 'Azul', 29),
+('BCD1626', 'Jeep', 'Renegade', 2021, 'Verde', 30);
+
+INSERT INTO EquipeMecanicos (NomeEquipe) VALUES
+('Equipe A'),
+('Equipe B'),
+('Equipe C');
+
+INSERT INTO Mecanico (Nome, Endereco, Especialidade, CodigoEquipe) VALUES
+('Carlos Souza', 'Rua F, 303', 'Motor', 1),
+('Ana Lima', 'Rua G, 404', 'Suspensão', 2),
+('Paulo Rocha', 'Rua H, 505', 'Freios', 3),
+('Fernanda Silva', 'Rua I, 606', 'Elétrica', 1),
+('Ricardo Oliveira', 'Rua J, 707', 'Transmissão', 2),
+('Mariana Costa', 'Rua K, 808', 'Injeção Eletrônica', 3);
+
+INSERT INTO Servico (Descricao, ValorMaoDeObra) VALUES
+('Troca de óleo', 100.00),
+('Alinhamento', 150.00),
+('Balanceamento', 120.00),
+('Troca de pastilhas de freio', 200.00),
+('Reparo na suspensão', 300.00),
+('Troca de correia dentada', 250.00),
+('Reparo no motor', 500.00),
+('Troca de amortecedor', 400.00),
+('Reparo na injeção eletrônica', 350.00),
+('Troca de bateria', 180.00);
+
+INSERT INTO Peca (Descricao, Valor) VALUES
+('Filtro de óleo', 30.00),
+('Pastilha de freio', 120.00),
+('Amortecedor', 250.00),
+('Vela de ignição', 50.00),
+('Correia dentada', 80.00),
+('Bateria', 300.00),
+('Sensor de oxigênio', 150.00),
+('Rolamento', 200.00),
+('Radiador', 400.00),
+('Disco de freio', 180.00);
+
+INSERT INTO OrdemServico (DataEmissao, ValorTotal, Status, DataConclusao, Placa, CodigoEquipe) VALUES
+('2023-10-01', 250.00, 'Em andamento', '2023-10-05', 'ABC1234', 1),
+('2023-10-02', 300.00, 'Concluída', '2023-10-06', 'XYZ5678', 2),
+('2023-10-03', 400.00, 'Em andamento', '2023-10-07', 'DEF9101', 3),
+('2023-10-04', 150.00, 'Concluída', '2023-10-08', 'GHI1121', 1),
+('2023-10-05', 500.00, 'Em andamento', '2023-10-09', 'JKL3141', 2),
+('2023-10-06', 350.00, 'Concluída', '2023-10-10', 'MNO4151', 3),
+('2023-10-07', 200.00, 'Em andamento', '2023-10-11', 'PQR6171', 1),
+('2023-10-08', 450.00, 'Concluída', '2023-10-12', 'STU8191', 2),
+('2023-10-09', 300.00, 'Em andamento', '2023-10-13', 'VWX0212', 3),
+('2023-10-10', 250.00, 'Concluída', '2023-10-14', 'YZA1222', 1),
+('2023-10-11', 400.00, 'Em andamento', '2023-10-15', 'BCD3242', 2),
+('2023-10-12', 150.00, 'Concluída', '2023-10-16', 'EFG5262', 3),
+('2023-10-13', 500.00, 'Em andamento', '2023-10-17', 'HIJ7282', 1),
+('2023-10-14', 350.00, 'Concluída', '2023-10-18', 'KLM9303', 2),
+('2023-10-15', 200.00, 'Em andamento', '2023-10-19', 'NOP1323', 3),
+('2023-10-16', 450.00, 'Concluída', '2023-10-20', 'QRS3343', 1),
+('2023-10-17', 300.00, 'Em andamento', '2023-10-21', 'TUV5363', 2),
+('2023-10-18', 250.00, 'Concluída', '2023-10-22', 'WXY7383', 3),
+('2023-10-19', 400.00, 'Em andamento', '2023-10-23', 'ZAB9404', 1),
+('2023-10-20', 150.00, 'Concluída', '2023-10-24', 'CDE1424', 2),
+('2023-10-21', 500.00, 'Em andamento', '2023-10-25', 'EFG3444', 3),
+('2023-10-22', 350.00, 'Concluída', '2023-10-26', 'GHI5464', 1),
+('2023-10-23', 200.00, 'Em andamento', '2023-10-27', 'IJK7484', 2),
+('2023-10-24', 450.00, 'Concluída', '2023-10-28', 'LMN9505', 3),
+('2023-10-25', 300.00, 'Em andamento', '2023-10-29', 'OPQ1525', 1),
+('2023-10-26', 250.00, 'Concluída', '2023-10-30', 'RST3545', 2),
+('2023-10-27', 400.00, 'Em andamento', '2023-10-31', 'TUV5565', 3),
+('2023-10-28', 150.00, 'Concluída', '2023-11-01', 'VWX7585', 1),
+('2023-10-29', 500.00, 'Em andamento', '2023-11-02', 'YZA9606', 2),
+('2023-10-30', 350.00, 'Concluída', '2023-11-03', 'BCD1626', 3);
+
+INSERT INTO Peca (Descricao, Valor) VALUES
+('Filtro de ar', 40.00),
+('Lâmpada de farol', 25.00),
+('Bomba de combustível', 220.00),
+('Cabo de vela', 60.00),
+('Junta do cabeçote', 90.00),
+('Termostato', 70.00),
+('Sensor de temperatura', 85.00),
+('Mangueira de radiador', 45.00),
+('Correia alternador', 55.00),
+('Kit embreagem', 500.00),
+('Rolamento de roda', 180.00),
+('Bucha de suspensão', 120.00),
+('Barra estabilizadora', 200.00),
+('Lona de freio', 100.00),
+('Cilindro mestre', 150.00),
+('Reservatório de óleo', 80.00),
+('Válvula termostática', 95.00),
+('Intercooler', 300.00),
+('Turbina', 1200.00),
+('Radiador de óleo', 250.00);
+
+INSERT INTO Servico (Descricao, ValorMaoDeObra) VALUES
+('Troca de filtro de ar', 50.00),
+('Substituição de lâmpada de farol', 30.00),
+('Troca de bomba de combustível', 250.00),
+('Substituição de cabo de vela', 80.00),
+('Troca de junta do cabeçote', 400.00),
+('Substituição de termostato', 100.00),
+('Troca de sensor de temperatura', 120.00),
+('Substituição de mangueira de radiador', 60.00),
+('Troca de correia do alternador', 90.00),
+('Substituição de kit de embreagem', 600.00),
+('Troca de rolamento de roda', 200.00),
+('Substituição de bucha de suspensão', 150.00),
+('Reparo na barra estabilizadora', 180.00),
+('Troca de lona de freio', 130.00),
+('Substituição de cilindro mestre', 170.00),
+('Troca de reservatório de óleo', 70.00),
+('Substituição de válvula termostática', 110.00),
+('Reparo no intercooler', 350.00),
+('Troca de turbina', 1500.00),
+('Substituição de radiador de óleo', 300.00);
+
+INSERT INTO ItemOS (NumeroOS, CodigoServico, CodigoPeca, Quantidade, ValorTotal) VALUES
+(21, 11, 11, 1, 380.00), -- Troca de rolamento de roda + Rolamento de roda
+(22, 12, 12, 1, 270.00), -- Substitutição de bucha de suspensão + Bucha de suspensão
+(23, 13, NULL, 1, 180.00), -- Reparo na barra estabilizadora
+(24, 14, 13, 1, 300.00), -- Troca de lona de freio + Lona de freio
+(25, 15, 14, 1, 320.00), -- Substitutição de cilindro mestre + Cilindro mestre
+(26, 16, 15, 1, 150.00), -- Troca de reservatório de óleo + Reservatório de óleo
+(27, 17, 16, 1, 205.00), -- Substitutição de válvula termostática + Válvula termostática
+(28, 18, NULL, 1, 350.00), -- Reparo no intercooler
+(29, 19, 17, 1, 2700.00), -- Troca de turbina + Turbina
+(30, 20, 18, 1, 550.00), -- Substitutição de radiador de óleo + Radiador de óleo
+(31, 11, 19, 1, 430.00), -- Troca de rolamento de roda + Rolamento de roda
+(32, 12, 20, 1, 320.00), -- Substitutição de bucha de suspensão + Bucha de suspensão
+(33, 13, NULL, 1, 180.00), -- Reparo na barra estabilizadora
+(34, 14, 11, 1, 280.00), -- Troca de lona de freio + Lona de freio
+(35, 15, 12, 1, 270.00), -- Substitutição de cilindro mestre + Cilindro mestre
+(36, 16, 13, 1, 230.00), -- Troca de reservatório de óleo + Reservatório de óleo
+(37, 17, 14, 1, 250.00), -- Substitutição de válvula termostática + Válvula termostática
+(38, 18, NULL, 1, 350.00), -- Reparo no intercooler
+(39, 19, 15, 1, 1700.00), -- Troca de turbina + Turbina
+(40, 20, 16, 1, 330.00); -- Substitutição de radiador de óleo + Radiador de óleo
